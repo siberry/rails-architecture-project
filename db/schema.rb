@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_16_211213) do
+ActiveRecord::Schema.define(version: 2019_04_16_215551) do
 
   create_table "architects", force: :cascade do |t|
     t.string "name"
@@ -44,6 +44,13 @@ ActiveRecord::Schema.define(version: 2019_04_16_211213) do
     t.string "city"
     t.string "state"
     t.string "continent"
+  end
+
+  create_table "user_buildings", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "building_id"
+    t.index ["building_id"], name: "index_user_buildings_on_building_id"
+    t.index ["user_id"], name: "index_user_buildings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
