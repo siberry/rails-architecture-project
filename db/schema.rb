@@ -10,7 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_15_201940) do
+ActiveRecord::Schema.define(version: 2019_04_16_211213) do
+
+  create_table "architects", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "building_elements", force: :cascade do |t|
+    t.integer "building_id"
+    t.integer "element_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["building_id"], name: "index_building_elements_on_building_id"
+    t.index ["element_id"], name: "index_building_elements_on_element_id"
+  end
+
+  create_table "buildings", force: :cascade do |t|
+    t.integer "architect_id"
+    t.string "name"
+    t.integer "location_id"
+    t.string "imgurl"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "elements", force: :cascade do |t|
     t.string "name"
@@ -18,21 +40,15 @@ ActiveRecord::Schema.define(version: 2019_04_15_201940) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "home_elements", force: :cascade do |t|
-    t.integer "home_id"
-    t.integer "element_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["element_id"], name: "index_home_elements_on_element_id"
-    t.index ["home_id"], name: "index_home_elements_on_home_id"
+  create_table "locations", force: :cascade do |t|
+    t.string "city"
+    t.string "state"
+    t.string "continent"
   end
 
-  create_table "homes", force: :cascade do |t|
-    t.string "name"
-    t.string "location"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "imgurl"
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
   end
 
 end

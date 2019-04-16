@@ -1,28 +1,12 @@
-home1 = Home.create(name: "Two-story family home", location: "Meridian Hills, Indiana", imgurl: "images/home1.jpg")
-  element1 = Element.create(name: "horizontal sliding windows")
-  element2 = Element.create(name: "double garage")
-  element3 = Element.create(name: "brick detail")
-  element4 = Element.create(name: "suburban")
+Building.destroy_all
+Element.destroy_all
+BuildingElement.destroy_all
+Architect.destroy_all
 
-home2 = Home.create(name: "Two-story lakehouse", location: "Hamburg, Germany", imgurl: "images/home2.jpg")
-  element5 = Element.create(name: "lake")
-  element6 = Element.create(name: "wrap-around balcony")
-  element7 = Element.create(name: "cliffside")
-  element8 = Element.create(name: "forest")
-  element9 = Element.create(name: "attic")
-  element10 = Element.create(name: "grey")
+# Building - name, location_id, imgurl, architect_id
+# Element - name
+# BuildingElement - building_id, element_id
 
-home3 = Home.create(name: "Two-story traditional", location: "London, Canada", imgurl: "images/home3.jpg")
-  element11 = Element.create(name: "picket fence")
-  element12 = Element.create(name: "white")
-  element13 = Element.create(name: "wood shed")
-  element14 = Element.create(name: "garden")
-  element19 = Element.create(name: "wood")
-
-home4 = Home.create(name: "two-story lakehouse", location: "Tyrol, Italy", imgurl: "images/home4.jpg")
-
-home5 = Home.create(name: "Two-family modern", location: "Uusikaupunki, Finland", imgurl: "images/home4.jpg")
-  element20 = Element.create(name: "two-family")
-  element21 = Element.create(name: "green")
-  element22 = Element.create(name: "patio")
-  element23 = Element.create(name: "lawn")
+wright = Architect.create(name: "Frank Lloyd Wright")
+  millrun = Location.create(city: "Mill Run", state: "Pennsylvania", continent: "North America")
+  Building.create(name: "Falling Water", location: millrun, architect: wright, imgurl: '/assets/fallingwater.jpg')
