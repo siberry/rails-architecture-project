@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+.index-img {
+  max-width: 98%;
+  height: auto;
+  float: left;
+  padding: 5px;
+  }
+
+.index-img:hover {
+  opacity: 0.3
+}
+
+.index {
+  column-count: 3;
+  column-gap: 0.5%;
+}

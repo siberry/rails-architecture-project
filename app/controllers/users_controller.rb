@@ -8,12 +8,12 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
     return redirect_to controller: 'users', action: 'new' unless @user.save
     session[:user_id] = @user.id
-    redirect_to controller: 'buildings', action: 'index'
+    redirect_to controller: 'application', action: 'frontpage'
   end
 
   private
   def user_params
-    params.require(:user).permit(:username, :password, :password_confirmation)
+    params.require(:user).permit(:username, :password)
   end
 
 end

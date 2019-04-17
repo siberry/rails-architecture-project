@@ -1,0 +1,4 @@
+<%= @location.city %>
+<% @location.buildings.each do |building| %>
+  <img src="<%= building.imgurl%>" alt="<%=building.name%>" class="index-img">
+<% end %>

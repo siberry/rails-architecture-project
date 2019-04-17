@@ -9,4 +9,13 @@ Architect.destroy_all
 
 wright = Architect.create(name: "Frank Lloyd Wright")
   millrun = Location.create(city: "Mill Run", state: "Pennsylvania", continent: "North America")
-  Building.create(name: "Falling Water", location: millrun, architect: wright, imgurl: '/assets/fallingwater.jpg')
+    Building.create(name: "Falling Water", location: millrun, architect: wright, imgurl: '/assets/fallingwater.jpg')
+  nyc = Location.create(city: "New York", state: "New York", continent: "North America")
+    Building.create(name: 'Guggenheim Museum', location: nyc, imgurl: '/assets/guggenheim.jpg', architect: wright)
+
+barcelona = Location.create(city: "Barcelona", country: "Spain", continent: "Europe")
+  guadi = Architect.create(name: "Antoni Gaudí")
+    Building.create(name: "Park Güell", location: barcelona, architect: guadi, imgurl: '/assets/parkguell.jpg')
+    Building.create(name: "Casa Milà", location: barcelona, architect: guadi, imgurl: '/assets/casamila.jpg')
+  mies = Architect.create(name: "Ludwig Mies van der Rohe")
+    Building.create(name: "Barcelona Pavilion", location: barcelona, architect: mies, imgurl: '/assets/barcelonapavilion.jpg')

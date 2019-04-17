@@ -1,0 +1,3 @@
+<% @locations.each do |location| %>
+  <a href="locations/<%=location.id%>"><img src="<%= location.buildings.sample.imgurl%>" alt="location.city" class="index-img"></a>
+<% end %>

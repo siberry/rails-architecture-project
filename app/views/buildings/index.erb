@@ -1,4 +1,5 @@
-<% @buildings.each do |building|  %>
-  <%= building.name %>
-  <img src="<%= building.imgurl %>">
-<% end %>
+<div class="index">
+  <% @buildings.each do |building|  %>
+  <a href="buildings/<%=building.id%>"><img src="<%= building.imgurl %>" class="index-img"></a>
+  <% end %>
+</div>
