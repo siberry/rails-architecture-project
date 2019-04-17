@@ -32,7 +32,7 @@
   }
 
 .index-img:hover {
-  opacity: 0.3
+  opacity: 0.8;
 }
 
 .index {
@@ -42,6 +42,7 @@
 
 .show-img {
   height: 38em;
+  float:left;
 }
 
 a {

@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :buildings, only:[:index, :show]
+  resources :buildings, only:[:index, :show, :update]
   resources :elements, only:[:index, :show]
   resources :locations, only:[:index, :show]
   resources :architects, only:[:index, :show]
+
+#  resources :user_buildings, only:[:new, :create]
 
   resources :users, only:[:show]
   resources :login, only: [:new, :create]

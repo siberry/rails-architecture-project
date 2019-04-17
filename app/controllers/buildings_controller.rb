@@ -7,4 +7,10 @@ class BuildingsController < ApplicationController
   def show
     @building = Building.find(params[:id])
   end
+
+  def update
+    @building = Building.find(params[:id])
+    @building.users << current_user
+    redirect_to @building
+  end
 end

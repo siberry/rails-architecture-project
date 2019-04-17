@@ -1,0 +1,5 @@
+<div class="index">
+  <% @user.buildings.each do |building| %>
+    <a href="/buildings/<%=building.id%>"></a><img src="<%=building.imgurl%>" alt="" class="index-img">
+  <% end %>
+</div>
