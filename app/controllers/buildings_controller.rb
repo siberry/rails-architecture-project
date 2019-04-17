@@ -10,7 +10,13 @@ class BuildingsController < ApplicationController
 
   def update
     @building = Building.find(params[:id])
-    @building.users << current_user
-    redirect_to @building
+    @notification = nil
+    if @user.valid? && !UserBuilding.find_by(building: @building, user: @user)
+      @building.users << current_user
+      redirect_to @building
+    else
+      @notification = "Log in or sign up :)" unless @user.valid?
+      redirect_to @building
+    end
   end
 end

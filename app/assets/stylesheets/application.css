@@ -14,57 +14,51 @@
  *= require_self
  */
 
-* {
-  font-family: "Courier New", Courier, monospace;
-}
+ * {
+   font-family: "Courier New", Courier, monospace;
+ }
 
-.home-icon {
-  width: 25px;
-  display: inline;
-  background-color: #8FBC8F;
-}
+ .home-icon {
+   width: 25px;
+   display: inline;
+   background-color: #8FBC8F;
+ }
 
-.index-img {
-  max-width: 98%;
-  height: auto;
-  float: left;
-  padding: 5px;
-  }
+ .index-img {
+   max-width: 98%;
+   height: auto;
+   float: left;
+   padding: 5px;
+   }
 
-.index-img:hover {
-  opacity: 0.8;
-}
+ .index-img:hover {
+   opacity: 0.3
+ }
 
-.index {
-  column-count: 3;
-  column-gap: 0.5%;
-}
+ .index {
+   column-count: 3;
+   column-gap: 0.5%;
+ }
 
-.show-img {
-  height: 38em;
-  float:left;
-}
+ .show-img {
+   height: 38em;
+ }
 
-a {
-  text-decoration: none;
-}
+ a {
+   text-decoration: none;
+ }
 
-#user-icon {
-  width: 25px;
-  height: auto;
-  background-color: #8FBC8F;
-}
+ #user-icon {
+   width: 25px;
+   height: auto;
+   background-color: #8FBC8F;
+ }
 
-.log-button {
-  display: inline;
-  float: right;
-  width: 58px;
-  font-family: "Courier New", Courier, monospace;
-}
-.no-user {
+ .log-button {
+   display: inline;
+   float: right;
+   width: 58px;
+ }
 
-}
-
-.location-index-text {
-  text-align: center;
-}
+ .location-index-text {
+   text-align: center;

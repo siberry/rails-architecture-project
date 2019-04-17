@@ -2,7 +2,8 @@
 <%= link_to @building.architect.name, @building.architect %>
 <%= link_to @building.location.city, @building.location %>
 <br>
-<%= form_tag @building, method: "patch" do %>
-        <%= submit_tag "💗" %>
+<%= form_tag @building, method: "patch", class: "like-button" do %>
+        <%= submit_tag "like" %>
       <% end %>
+<%= @notification %>
 <img src="<%=@building.imgurl%>" alt="<%=@building.name%>" class="show-img">

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :locations, only:[:index, :show]
   resources :architects, only:[:index, :show]
 
-#  resources :user_buildings, only:[:new, :create]
+  resources :user_buildings, only: :destroy
 
   resources :users, only:[:show]
   resources :login, only: [:new, :create]

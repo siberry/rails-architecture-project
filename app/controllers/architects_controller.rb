@@ -4,6 +4,6 @@ class ArchitectsController < ApplicationController
   end
 
   def index
-
+    @architects = Architect.pages
   end
 end
