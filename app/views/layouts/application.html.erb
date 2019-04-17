@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HomeProject</title>
+    <title>Architourist</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,14 +10,19 @@
   </head>
 
   <body>
-    <% if @user %>
-      Hi, <%= @user.username %>
-      <%= form_tag ({controller: 'login', action: 'destroy', method: 'post'}) do %>
+    <% if @user.valid? %>
+      <% if params[:controller] != "users"%>
+        <a href="/users/<%=@user.id%>"><img src="/assets/user.png" alt="" id="user-icon"></a>
+        <%# <%= link_to @user.username, @user %>
+      <% end %>
+      <%= form_tag ({controller: 'login', action: 'destroy', method: 'post'}), class: "log-button" do %>
       <input type="submit" value="logout">
       <% end %>
-    <% else %>
-      <%= button_to "Sign Up", signup_path, method: :get %>
-      <%= button_to "Login", login_path, method: :get %>
+    <% elsif params[:controller] != ("users" && "login") %>
+      <div class="no-user">
+        <%= button_to "Sign Up", signup_path, method: :get, class: "log-button" %> <br>
+        <%= button_to "Log In", login_path, method: :get, class: "log-button" %>
+      </div>
     <% end %>
     <%= yield %>
   </body>
