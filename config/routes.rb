@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :buildings, only:[:index, :show]
   resources :elements, only:[:index, :show]
   resources :locations, only:[:index, :show]
-  resources :architects, only:[:show]
+  resources :architects, only:[:index, :show]
 
   resources :users, only:[:show]
   resources :login, only: [:new, :create]

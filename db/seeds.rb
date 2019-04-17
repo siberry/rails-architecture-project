@@ -2,6 +2,7 @@ Building.destroy_all
 Element.destroy_all
 BuildingElement.destroy_all
 Architect.destroy_all
+Location.destroy_all
 
 # Building - name, location_id, imgurl, architect_id
 # Element - name

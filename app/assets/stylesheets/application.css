@@ -18,6 +18,12 @@
   font-family: "Courier New", Courier, monospace;
 }
 
+.home-icon {
+  width: 25px;
+  display: inline;
+  background-color: #8FBC8F;
+}
+
 .index-img {
   max-width: 98%;
   height: auto;
@@ -35,7 +41,7 @@
 }
 
 .show-img {
-  height: 40em;
+  height: 38em;
 }
 
 a {
@@ -56,4 +62,8 @@ a {
 }
 .no-user {
 
+}
+
+.location-index-text {
+  text-align: center;
 }

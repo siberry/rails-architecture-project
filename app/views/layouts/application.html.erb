@@ -24,6 +24,9 @@
         <%= button_to "Log In", login_path, method: :get, class: "log-button" %>
       </div>
     <% end %>
+    <a href="/"><img src="/assets/home-icon.png" alt="" class="home-icon"></a> <%= link_to "Buildings & Sites", buildings_path %>,
+    <%= link_to "Locations", locations_path %>, <%= link_to "Architects", architects_path %>
+    <br>
     <%= yield %>
   </body>
 </html>
