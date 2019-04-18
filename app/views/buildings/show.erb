@@ -5,8 +5,7 @@
 </div>
 
 <%= form_tag @building, method: "patch", class: "like-button" do %>
-        <%= submit_tag "like" %>
-      <% end %>
-<%= @error %>
+  <%= submit_tag "like" %>
+<% end %>
 
 <img src="<%=@building.imgurl%>" alt="<%=@building.name%>" title="<%=@building.name%>" class="show-img">
