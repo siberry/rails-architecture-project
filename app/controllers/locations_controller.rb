@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
   def index
-    @locations = Location.pages
+    @locations = Location.all
   end
 
   def show

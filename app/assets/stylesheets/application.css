@@ -40,12 +40,6 @@
    column-gap: 0.5%;
  }
 
- .show-img {
-   height: 38em;
- }
- .show-img:hover {
-   opacity: 0.7;
- }
 
  a {
    text-decoration: none;
@@ -63,6 +57,19 @@
    width: 58px;
  }
 
- .location-index-text {
-   text-align: center;
+.no-user {
+  float: right;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(119, 148, 92, 0.32);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.remove-button {
+  display: inline-block;
+  right: 0;
+  bottom: 0;
 }

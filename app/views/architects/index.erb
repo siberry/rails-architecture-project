@@ -1,5 +1,10 @@
 <div class="index">
 <% @architects.each do |architect| %>
-    <a href="architect/<%=architect.id%>"><img src="<%= architect.buildings.sample.imgurl%>" alt="<%=architect.name%>" class="index-img"/></a>
+  <span class="building-show">
+    <a href="architects/<%=architect.id%>"><img src="<%= architect.buildings.sample.imgurl%>" alt="<%=architect.name%>" class="index-img"/></a>
+    <span class="building-info">
+      <%=architect.name%>
+      </span>
+      </span>
 <% end %>
 </div>

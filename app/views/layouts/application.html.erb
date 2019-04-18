@@ -10,23 +10,27 @@
   </head>
 
   <body>
-    <% if @user.valid? %>
+    <div class="header">
+      <% if @user.valid? %>
       <% if params[:controller] != "users"%>
-        <a href="/users/<%=@user.id%>"><img src="/assets/user.png" alt="" id="user-icon"></a>
-        <%# <%= link_to @user.username, @user %>
+      <a href="/users/<%=@user.id%>"><img src="/assets/user.png" alt="" id="user-icon"></a>
+      <%# <%= link_to @user.username, @user %>
       <% end %>
       <%= form_tag ({controller: 'login', action: 'destroy', method: 'post'}), class: "log-button" do %>
       <input type="submit" value="logout">
       <% end %>
-    <% elsif params[:controller] != ("users" && "login") %>
+      <% elsif params[:controller] != ("users" && "login") %>
       <div class="no-user">
         <%= button_to "Sign Up", signup_path, method: :get, class: "log-button" %> <br>
         <%= button_to "Log In", login_path, method: :get, class: "log-button" %>
       </div>
-    <% end %>
-    <a href="/"><img src="/assets/home-icon.png" alt="" class="home-icon"></a> <%= link_to "Buildings & Sites", buildings_path %>,
-    <%= link_to "Locations", locations_path %>, <%= link_to "Architects", architects_path %>
-    <br>
-    <%= yield %>
+      <% end %>
+      <a href="/"><img src="/assets/home-icon.png" alt="" class="home-icon"></a> <%= link_to "Buildings & Sites", buildings_path %>,
+      <%= link_to "Locations", locations_path %>, <%= link_to "Architects", architects_path %>
+    </div>
+    <hr>
+    <div>
+      <%= yield %>
+    </div>
   </body>
 </html>

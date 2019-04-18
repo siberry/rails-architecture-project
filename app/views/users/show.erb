@@ -1,10 +1,15 @@
 <div class="index">
   <% @user.user_buildings.each do |user_building| %>
-  <a href="/buildings/<%=user_building.building.id%>">
-  <img src="<%=user_building.building.imgurl%>" alt="" class="index-img">
-  </a>
-    <%= form_tag user_building, method: "delete" do %>
+  <div class="building-show">
+    <a href="/buildings/<%=user_building.building.id%>">
+      <img src="<%=user_building.building.imgurl%>" alt="" class="index-img">
+    </a>
+    <div class="remove-button">
+      <%= form_tag user_building, method: "delete" do %>
         <%= submit_tag "Remove building" %>
       <% end %>
+    </div>
+
+  </div>
   <% end %>
 </div>
