@@ -31,7 +31,7 @@
    }
 
  .index-img:hover {
-   opacity: 0.7
+   opacity: 0.8
  }
 
  .index {
@@ -42,6 +42,10 @@
 
  a {
    text-decoration: none;
+ }
+
+ a:visited {
+   color: blue;
  }
 
  #user-icon {
