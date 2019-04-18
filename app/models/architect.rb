@@ -4,7 +4,7 @@ class Architect < ActiveRecord::Base
 
   def self.pages
     all.select { |architect|
-      architect.buildings.count > 2
+      architect.buildings.count > 1
     }
   end
 end

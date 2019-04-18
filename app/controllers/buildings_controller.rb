@@ -15,7 +15,7 @@ class BuildingsController < ApplicationController
       @building.users << current_user
       redirect_to @building
     else
-      @notification = "Log in or sign up :)" unless @user.valid?
+      @error = "Log in or sign up :)"
       redirect_to @building
     end
   end

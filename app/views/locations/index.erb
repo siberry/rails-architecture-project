@@ -1,7 +1,8 @@
 <div class="index">
 <% @locations.each do |location| %>
-  <div class="index-img">
-    <a href="locations/<%=location.id%>"><img src="<%= location.buildings.sample.imgurl%>" alt="location.city" class="index-img"/></a>
-  </div>
+  <span class="location-index">
+    <a href="locations/<%=location.id%>"><img src="<%= location.buildings.sample.imgurl%>" alt="<%=location.display%>" class="index-img"/></a>
+  </span>
+  <span><%=location.display%></span>
 <% end %>
 </div>

@@ -43,6 +43,9 @@
  .show-img {
    height: 38em;
  }
+ .show-img:hover {
+   opacity: 0.7;
+ }
 
  a {
    text-decoration: none;
@@ -62,3 +65,4 @@
 
  .location-index-text {
    text-align: center;
+}
