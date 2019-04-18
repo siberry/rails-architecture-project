@@ -5,6 +5,6 @@
   <%= f.label :password %>
   <%= f.password_field :password %>
 
-  <%= f.submit "log in" %>
+  <%= f.submit "●", class: "like-button" %>
   Don’t have an account? <%= link_to(controller: 'users', action: 'new') { 'Sign up' } %>
 <% end %>
