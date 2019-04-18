@@ -1,10 +1,10 @@
 <div class="index">
 <% @locations.each do |location| %>
-  <span class="building-show">
+  <div class="building-show" id="location-index">
     <a href="locations/<%=location.id%>"><img src="<%= location.buildings.sample.imgurl%>" alt="<%=location.display%>" class="index-img"/></a>
     <span class="building-info">
       <%=location.display%>
     </span>
-  </span>
+  </div>
 <% end %>
 </div>

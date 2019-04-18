@@ -1,6 +1,6 @@
 <div class="index">
 <% @architects.each do |architect| %>
-  <span class="building-show">
+  <span class="building-show" id="location-index">
     <a href="architects/<%=architect.id%>"><img src="<%= architect.buildings.sample.imgurl%>" alt="<%=architect.name%>" class="index-img"/></a>
     <span class="building-info">
       <%=architect.name%>

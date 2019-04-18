@@ -1,6 +1,6 @@
 class Building < ApplicationRecord
   has_many :building_elements
-  has_many :elements, through: :home_elements
+  has_many :elements, through: :building_elements
   belongs_to :architect
   belongs_to :location
   has_many :user_buildings

@@ -1,0 +1,8 @@
+<h2><%= @element.name %></h2>
+<div class="index">
+
+  <% @element.buildings.each do |building| %>
+    <a href="/buildings/<%=building.id%>">
+    <img src="<%= building.imgurl%>" alt="<%=building.name%>" class="index-img"></a>
+  <% end %>
+</div>

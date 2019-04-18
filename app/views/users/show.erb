@@ -4,9 +4,9 @@
     <a href="/buildings/<%=user_building.building.id%>">
       <img src="<%=user_building.building.imgurl%>" alt="" class="index-img">
     </a>
-    <div class="remove-button">
+    <div class="test">
       <%= form_tag user_building, method: "delete" do %>
-        <%= submit_tag "Remove building" %>
+        <%= submit_tag "✖︎", class: "like-button" %>
       <% end %>
     </div>
 

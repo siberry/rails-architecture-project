@@ -23,17 +23,27 @@ nyc = Location.create(city: "New York", state: "New York", continent: "North Ame
 bangladesh = Location.create(country: "Bangladesh", continent: "Asia")
 barcelona = Location.create(city: "Barcelona", country: "Spain", continent: "Europe")
 
-Building.create(name: "Falling Water", location: pennsylvania, architect: wright, imgurl: '/assets/fallingwater.jpg')
-Building.create(name: 'Guggenheim Museum', location: nyc, imgurl: '/assets/guggenheim.jpg', architect: wright)
+falling_water = Building.create(name: "Falling Water", location: pennsylvania, architect: wright, imgurl: '/assets/fallingwater.jpg')
+guggenheim = Building.create(name: 'Guggenheim Museum', location: nyc, imgurl: '/assets/guggenheim.jpg', architect: wright)
 Building.create(name: 'Hollyhock House', location: california, imgurl: '/assets/hollyhock.jpg', architect: wright)
 Building.create(name: 'Spring Street Salt Shed', location: nyc, imgurl: '/assets/salt.jpg', architect: dattner)
 Building.create(name: "PPG Palace", location: pennsylvania, architect: johnson, imgurl: '/assets/ppgpalace.jpg')
 Building.create(name: "Fisher House", location: pennsylvania, imgurl: '/assets/fisherhouse.jpg', architect: kahn)
-Building.create(name: "Salk Institute", location: california, architect: kahn, imgurl: '/assets/salkinstitute.jpg')
-Building.create(name: "Sher-e-Bangla Nagar (National Assembly Hall)", location: bangladesh, architect: kahn, imgurl: '/assets/nationalassembly.jpg')
+Building.create(name: "Salk Institute", location: california, architect: kahn, imgurl: '/assets/salk.jpg')
+sher = Building.create(name: "Sher-e-Bangla Nagar (National Assembly Hall)", location: bangladesh, architect: kahn, imgurl: '/assets/nationalassembly.jpg')
 Building.create(name: "Park Güell", location: barcelona, architect: guadi, imgurl: '/assets/parkguell.jpg')
 Building.create(name: "Casa Milà", location: barcelona, architect: guadi, imgurl: '/assets/casamila.jpg')
 Building.create(name: "Casa Vicens", location: barcelona, architect: guadi, imgurl: '/assets/vicens.jpg')
 Building.create(name: "Barcelona Pavilion", location: barcelona, architect: mies, imgurl: '/assets/barcelonapavilion.jpg')
 Building.create(name: "Seagram Building", location: nyc, architect: mies, imgurl: '/assets/seagrambldg.jpg')
 Building.create(name: "Flatiron Building", location: nyc, architect: burnham, imgurl: '/assets/flatiron.jpg')
+
+conrete = Element.create(name: "concrete")
+geometric = Element.create(name: "geometric")
+water = Element.create(name: "water")
+forest = Element.create(name: "forest")
+museum = Element.create(name: "museum")
+
+falling_water.elements << [water, forest]
+guggenheim.elements << [geometric, museum]
+sher.elements << [conrete, geometric, water]
