@@ -1,0 +1,6 @@
+<h2>Note for <%= @user_building.building.name %> </h2>
+<%= form_for @user_building do |f| %>
+  <%= f.text_area :note, class: "note-field" %>
+  <br> <br>
+  <%= f.submit "■", class: "like-button", id: "login-button" %>
+<% end %>

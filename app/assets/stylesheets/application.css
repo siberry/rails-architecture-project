@@ -70,3 +70,21 @@ hr {
     border-top: 1px solid rgba(119, 148, 92, 0.32);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+.note-field {
+  width: 25%;
+  height: 150px;
+  box-sizing: border-box;
+  resize: none;
+  font-size: .75em;
+}
+
+#user-show {
+  column-count: 4;
+}
+
+.note {
+  display: inline;
+  position: absolute;
+  margin-left: 3%;
+}

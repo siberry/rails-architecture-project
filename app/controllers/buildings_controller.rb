@@ -14,8 +14,10 @@ class BuildingsController < ApplicationController
     if @user.valid? && !UserBuilding.find_by(building: @building, user: @user)
       @building.users << current_user
       redirect_to @building
-    else
+    elsif !@user.valid?
       redirect_to new_login_path
+    else
+      redirect_to @user
     end
   end
 end

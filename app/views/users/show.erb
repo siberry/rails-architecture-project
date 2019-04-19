@@ -1,12 +1,22 @@
-<div class="index">
+<div class="index" id= "user-show">
   <% @user.user_buildings.each do |user_building| %>
   <div class="building-show" id="location-index">
     <a href="/buildings/<%=user_building.building.id%>">
       <img src="<%=user_building.building.imgurl%>" alt="" class="index-img">
     </a>
     <div class='remove-button'>
+      <% if user_building.note == nil %>
+        <%= button_to "Add a note", edit_user_building_path(user_building), method: :get %>
+      <% else %>
+        <%= button_to "Edit note", edit_user_building_path(user_building), method: :get %>
+      <% end %>
       <%= form_tag user_building, method: "delete" do %>
         <%= submit_tag "✖︎", class: "like-button" %>
+      <% end %>
+    </div>
+    <div class="note">
+      <% if user_building.note != nil %>
+        <%= user_building.note %>
       <% end %>
     </div>
 
