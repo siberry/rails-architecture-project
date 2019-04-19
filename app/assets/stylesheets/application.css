@@ -42,10 +42,11 @@
 
  a {
    text-decoration: none;
+   color: DodgerBlue ;
  }
 
  a:visited {
-   color: blue;
+   color: DodgerBlue ;
  }
 
  #user-icon {
