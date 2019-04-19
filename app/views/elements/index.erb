@@ -1,0 +1,8 @@
+<h2>Elements</h2>
+<ul>
+  <% @elements.each do |element| %>
+    <li>
+      <%= link_to element.name, element %>
+    </li>
+  <% end %>
+</ul>

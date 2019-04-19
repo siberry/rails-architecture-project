@@ -1,5 +1,5 @@
 <div class="index" id= "user-show">
-  <% @user.user_buildings.each do |user_building| %>
+  <% @user.user_buildings.shuffle.each do |user_building| %>
   <div class="building-show" id="location-index">
     <a href="/buildings/<%=user_building.building.id%>">
       <img src="<%=user_building.building.imgurl%>" alt="" class="index-img">
