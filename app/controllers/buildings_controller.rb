@@ -15,8 +15,7 @@ class BuildingsController < ApplicationController
       @building.users << current_user
       redirect_to @building
     else
-      @error = "Log in or sign up :)"
-      redirect_to @building
+      redirect_to new_login_path
     end
   end
 end
