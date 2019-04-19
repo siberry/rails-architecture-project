@@ -3,6 +3,6 @@ class UserBuilding < ActiveRecord::Base
   belongs_to :building
 
   validates_uniqueness_of :building, scope: :user
-  validates :note, length: {maximum: 30}
+  validates :note, length: {maximum: 100}
 
 end

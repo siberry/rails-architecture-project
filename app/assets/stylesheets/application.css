@@ -74,7 +74,7 @@ hr {
 
 .note-field {
   width: 25%;
-  height: 150px;
+  height: 70px;
   box-sizing: border-box;
   resize: none;
   font-size: .75em;
@@ -88,4 +88,5 @@ hr {
   display: inline;
   position: absolute;
   margin-left: 3%;
+  overflow-wrap: break-word;
 }
