@@ -9,12 +9,13 @@
 
 
   <img src="<%=@building.imgurl%>" alt="<%=@building.name%>" title="<%=@building.name%>" class="show-img">
-
+<% if @user.valid? %>
   <footer>
     <%= form_tag @building, method: "patch", class: "like-button" do %>
     <%= submit_tag "♥︎", class: "like-button" %>
     <% end %>
   </footer>
+<% end %>
 </div>
 <div class="elements-list">
   <h3>Elements:</h3>
