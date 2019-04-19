@@ -10,10 +10,22 @@
 
   <img src="<%=@building.imgurl%>" alt="<%=@building.name%>" title="<%=@building.name%>" class="show-img">
   <footer>
-    <%= form_tag @building, method: "patch", class: "like-button" do %>
-    <%= submit_tag "♥︎", class: "like-button" %>
+    <% if !UserBuilding.find_by(user_id: @user.id, building_id: @building.id) %>
+        <%= form_tag @building, method: "patch", class: "like-button" do %>
+        <%= submit_tag "♥︎", class: "like-button" %>
+        <% end %>
+    <% else %>
+      <% user_building = UserBuilding.find_by(user_id: @user.id, building_id: @building.id) %>
+      <% if user_building.note == nil %>
+        <%= button_to "Add a note", edit_user_building_path(user_building), method: :get %>
+      <% else %>
+        <%= button_to "Edit note", edit_user_building_path(user_building), method: :get %>
+      <% end %>
+      <%= form_tag user_building, method: "delete" do %>
+        <%= submit_tag "✖︎", class: "like-button" %>
+      <% end %>
     <% end %>
-  </footer>
+    </footer>
 </div>
 <div class="elements-list">
   <h3>Elements:</h3>
