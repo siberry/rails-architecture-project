@@ -1,4 +1,9 @@
 #location-index {
   display: block;
   position: relative;
+
+}
+
+.building-info:hover ~ .index-img, .building-info:hover ~ .show-img  {
+  opacity: 0.6;
 }
